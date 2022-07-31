@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHYSICS FESTIVAL XXIV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <!-- SIDE-BAR -->
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+      <div class="logo-pf">
+        <a href="../../home.html" target="_blank">LOGO</a>
+      </div>
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="menu">
+        <div class="item"><a href="../../home.html"></i>Home</a></div>
+        <div class="item">
+          <a class="sub-btn">Events<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="../grand-opening/index.html" class="sub-item">Grand Opening</a>
+            <a href="../webinar-nasional/index.html" class="sub-item">Webinar Nasional</a>
+            <a href="../lomba-fisika/index.html" class="sub-item">Lomba Fisika</a>
+            <a href="../lomba-karya-tulis-ilmiah/index.html" class="sub-item">LKTI</a>
+            <a href="../lomba-cerdas-tangkas-fisika/index.html" class="sub-item">LCTF</a>
+            <a href="#" class="sub-item">Design Competition</a>
+            <a href="../mading-competition/index.html" class="sub-item">Mading Competition</a>
+            <a href="../closing/index.html" class="sub-item">Closing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF SIDE-BAR -->
+
+    <!-- CONTENT -->
+    <main>
+      <div class="container">
+        <header>
+          <h1>Design Competition</h1>
+        </header>
+
+        <div class="content">
+          <div class="gambar">Gambar Mading Competition</div>
+          <div class="deskripsi">
+            Design Competition merupakan lomba design yang terdiri atas dua cabang lomba yaitu design poster dan karikatur dengan tema yang ditentukan.<br>
+            Aturan, tata cara...<br>
+            Tanggal: sekian sampai sekian<br>
+            <button>Daftar Sekarang!</button>
+            
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      //jquery for toggle sub menus
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+      });
+
+      //jquery for expand and collapse the sidebar
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+    </script>
+
+  </body>
+</html>
